@@ -103,3 +103,7 @@ C:\Users\450G6\source\repos\MovieApp\MovieApp\MovieApp\obj\Debug\MovieApp.csproj
 C:\Users\450G6\source\repos\MovieApp\MovieApp\MovieApp\obj\Debug\MovieApp.csproj.CopyComplete
 C:\Users\450G6\source\repos\MovieApp\MovieApp\MovieApp\obj\Debug\MovieApp.dll
 C:\Users\450G6\source\repos\MovieApp\MovieApp\MovieApp\obj\Debug\MovieApp.pdb
+C:\Users\450G6\source\repos\MovieApp\MovieApp\MovieApp\obj\Debug\MovieApp.Migrations.InitailModel.resources
+C:\Users\450G6\source\repos\MovieApp\MovieApp\MovieApp\obj\Debug\MovieApp.csproj.GenerateResource.cache
+C:\Users\450G6\source\repos\MovieApp\MovieApp\MovieApp\obj\Debug\MovieApp.Migrations.AddIsSubscribedToCustomer.resources
+C:\Users\450G6\source\repos\MovieApp\MovieApp\MovieApp\obj\Debug\MovieApp.Migrations.PopulateMembershipTypes.resources
