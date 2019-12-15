@@ -1,0 +1,18 @@
+﻿@model MovieApp.Models.Customer
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<h2>Customer Info</h2>
+<li>First name: @Model.FirstName</li>
+<li>Last name: @Model.LastName</li>
+@if (Model.BirthDate is null)
+{
+}
+else
+{
+    <li>Birth date: @Model.BirthDate</li>
+}
+<li>Membership type: @Model.MembershipType.Name</li>
+

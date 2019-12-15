@@ -1,0 +1,36 @@
+﻿@model IEnumerable<MovieApp.Models.Customer>
+@{
+    /**/
+
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<button type="submit" class="btn btn-primary" onclick="location.href='@Url.Action("New", "Customers")'">Add New Customer</button>
+<br />
+<br />
+@if (!Model.Any())
+{
+    <h1>We dont have any customers yet!</h1>
+}
+else
+{
+    var customers = Model;
+    <table class="table table-bordered alert-secondary table-hover ">
+        <tbody>
+            <tr>
+                <td class="alert-light text-center">CUSTOMERS</td>
+                <td class="alert-light text-center">MEMBERSHIP TYPE</td>
+            </tr>
+            @foreach (var customer in customers)
+            {
+                <tr>
+                    <td class="active">@Html.ActionLink(customer.FirstName + " " + customer.LastName, "Edit", "Customers", new { id = customer.Id }, null)</td>
+                    <td>@customer.MembershipType.Name</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+

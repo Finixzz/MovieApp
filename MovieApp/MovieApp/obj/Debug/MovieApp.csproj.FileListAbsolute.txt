@@ -103,3 +103,13 @@ C:\Users\450G6\source\repos\MovieApp\MovieApp\MovieApp\obj\Debug\MovieApp.csproj
 C:\Users\450G6\source\repos\MovieApp\MovieApp\MovieApp\obj\Debug\MovieApp.csproj.CopyComplete
 C:\Users\450G6\source\repos\MovieApp\MovieApp\MovieApp\obj\Debug\MovieApp.dll
 C:\Users\450G6\source\repos\MovieApp\MovieApp\MovieApp\obj\Debug\MovieApp.pdb
+C:\Users\450G6\source\repos\MovieApp\MovieApp\MovieApp\obj\Debug\MovieApp.Migrations.Initial.resources
+C:\Users\450G6\source\repos\MovieApp\MovieApp\MovieApp\obj\Debug\MovieApp.csproj.GenerateResource.cache
+C:\Users\450G6\source\repos\MovieApp\MovieApp\MovieApp\obj\Debug\MovieApp.Migrations.Initial1.resources
+C:\Users\450G6\source\repos\MovieApp\MovieApp\MovieApp\obj\Debug\MovieApp.Migrations.MembershipType.resources
+C:\Users\450G6\source\repos\MovieApp\MovieApp\MovieApp\obj\Debug\MovieApp.Migrations.AddedMshpTypesCtxt.resources
+C:\Users\450G6\source\repos\MovieApp\MovieApp\MovieApp\obj\Debug\MovieApp.Migrations.AddedMemTypeToCustomer.resources
+C:\Users\450G6\source\repos\MovieApp\MovieApp\MovieApp\obj\Debug\MovieApp.Migrations.PopulateMemTypes.resources
+C:\Users\450G6\source\repos\MovieApp\MovieApp\MovieApp\obj\Debug\MovieApp.Migrations.AddedGenreModelAndUpdatedModels.resources
+C:\Users\450G6\source\repos\MovieApp\MovieApp\MovieApp\obj\Debug\MovieApp.Migrations.AddedGenreToMoviesOneToMany.resources
+C:\Users\450G6\source\repos\MovieApp\MovieApp\MovieApp\obj\Debug\MovieApp.Migrations.PopulateGenre.resources

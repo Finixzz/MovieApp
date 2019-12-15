@@ -168,18 +168,65 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MoviesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201912142014299_Initial.cs" />
+    <Compile Include="Migrations\201912142014299_Initial.Designer.cs">
+      <DependentUpon>201912142014299_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912142017570_Initial1.cs" />
+    <Compile Include="Migrations\201912142017570_Initial1.Designer.cs">
+      <DependentUpon>201912142017570_Initial1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912142022591_MembershipType.cs" />
+    <Compile Include="Migrations\201912142022591_MembershipType.Designer.cs">
+      <DependentUpon>201912142022591_MembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912142024049_AddedMshpTypesCtxt.cs" />
+    <Compile Include="Migrations\201912142024049_AddedMshpTypesCtxt.Designer.cs">
+      <DependentUpon>201912142024049_AddedMshpTypesCtxt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912142026190_AddedMemTypeToCustomer.cs" />
+    <Compile Include="Migrations\201912142026190_AddedMemTypeToCustomer.Designer.cs">
+      <DependentUpon>201912142026190_AddedMemTypeToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912142033030_PopulateMemTypes.cs" />
+    <Compile Include="Migrations\201912142033030_PopulateMemTypes.Designer.cs">
+      <DependentUpon>201912142033030_PopulateMemTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912152013112_AddedGenreModelAndUpdatedModels.cs" />
+    <Compile Include="Migrations\201912152013112_AddedGenreModelAndUpdatedModels.Designer.cs">
+      <DependentUpon>201912152013112_AddedGenreModelAndUpdatedModels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912152015389_AddedGenreToMoviesOneToMany.cs" />
+    <Compile Include="Migrations\201912152015389_AddedGenreToMoviesOneToMany.Designer.cs">
+      <DependentUpon>201912152015389_AddedGenreToMoviesOneToMany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912152018124_PopulateGenre.cs" />
+    <Compile Include="Migrations\201912152018124_PopulateGenre.Designer.cs">
+      <DependentUpon>201912152018124_PopulateGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MembershipType.cs" />
+    <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModel\CustomerFormViewModel.cs" />
+    <Compile Include="ViewModel\MovieFormViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\animate.css" />
+    <Content Include="Content\bootstrap-lumen.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -212,8 +259,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
@@ -235,6 +280,12 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\_Navbar.cshtml" />
+    <Content Include="Views\Customers\Index.cshtml" />
+    <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Customers\CustomerForm.cshtml" />
+    <Content Include="Views\Movies\Index.cshtml" />
+    <Content Include="Views\Movies\MovieForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -251,6 +302,35 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201912142014299_Initial.resx">
+      <DependentUpon>201912142014299_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912142017570_Initial1.resx">
+      <DependentUpon>201912142017570_Initial1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912142022591_MembershipType.resx">
+      <DependentUpon>201912142022591_MembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912142024049_AddedMshpTypesCtxt.resx">
+      <DependentUpon>201912142024049_AddedMshpTypesCtxt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912142026190_AddedMemTypeToCustomer.resx">
+      <DependentUpon>201912142026190_AddedMemTypeToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912142033030_PopulateMemTypes.resx">
+      <DependentUpon>201912142033030_PopulateMemTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912152013112_AddedGenreModelAndUpdatedModels.resx">
+      <DependentUpon>201912152013112_AddedGenreModelAndUpdatedModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912152015389_AddedGenreToMoviesOneToMany.resx">
+      <DependentUpon>201912152015389_AddedGenreToMoviesOneToMany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912152018124_PopulateGenre.resx">
+      <DependentUpon>201912152018124_PopulateGenre.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
