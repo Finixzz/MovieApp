@@ -14,21 +14,43 @@
 else
 {
     var movies = Model;
+    /*
     <table class="table table-bordered alert-secondary table-hover">
-        <tbody>
-            <tr>
-                <td class="alert-light text-center">MOVIE NAME</td>
-                <td class="alert-light text-center">GENRE</td>
-            </tr>
-            @foreach (var movie in movies)
-            {
+            <tbody>
                 <tr>
-                    <td>@Html.ActionLink(movie.Name, "Edit", "Movies", new { id = movie.Id }, null)</td>
-                    <td>@movie.Genre.Name</td>
+                    <td class="alert-light text-center">MOVIE NAME</td>
+                    <td class="alert-light text-center">GENRE</td>
                 </tr>
-            }
-        </tbody>
-    </table>
+                @foreach (var movie in movies)
+                {
+                    <tr>
+                        <td>@Html.ActionLink(movie.Name, "Edit", "Movies", new { id = movie.Id }, null)</td>
+                        <td>@movie.Genre.Name</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+   */
 
+    List<MovieApp.Models.Movie> movieLL = new List<MovieApp.Models.Movie>();
+    int i;
+    for (i = 0; i < movies.Count(); i++)
+    {
+
+        <div class="card-deck" style="width:600px">
+            <div class="card">
+                <img class="card-img-top" src="https://images-na.ssl-images-amazon.com/images/I/91lnpx4HLoL._SX300_.jpg" width="3" height="350" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">@movies.ElementAt(i).Name</h5>
+                    <h6 class="card-title">Genre: @movies.ElementAt(i).Genre.Name</h6>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                    <a href="#" class="btn btn-primary" onclick="location.href='@Url.Action("Edit", "Movies", new { id = movies.ElementAt(i).Id }, null)'">Edit movie info</a>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+    }
 }
+
 

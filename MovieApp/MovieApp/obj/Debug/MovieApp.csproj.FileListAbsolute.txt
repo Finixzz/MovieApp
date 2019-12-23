@@ -113,3 +113,13 @@ C:\Users\450G6\source\repos\MovieApp\MovieApp\MovieApp\obj\Debug\MovieApp.Migrat
 C:\Users\450G6\source\repos\MovieApp\MovieApp\MovieApp\obj\Debug\MovieApp.Migrations.AddedGenreModelAndUpdatedModels.resources
 C:\Users\450G6\source\repos\MovieApp\MovieApp\MovieApp\obj\Debug\MovieApp.Migrations.AddedGenreToMoviesOneToMany.resources
 C:\Users\450G6\source\repos\MovieApp\MovieApp\MovieApp\obj\Debug\MovieApp.Migrations.PopulateGenre.resources
+C:\Users\450G6\source\repos\MovieApp\MovieApp\MovieApp\obj\Debug\MovieApp.Migrations.CustomerFirstNameAndLastNameSetToRequired.resources
+C:\Users\450G6\source\repos\MovieApp\MovieApp\MovieApp\obj\Debug\MovieApp.Migrations.EditedMovieModel.resources
+C:\Users\450G6\source\repos\MovieApp\MovieApp\MovieApp\bin\System.Net.Http.Formatting.dll
+C:\Users\450G6\source\repos\MovieApp\MovieApp\MovieApp\bin\System.Web.Http.dll
+C:\Users\450G6\source\repos\MovieApp\MovieApp\MovieApp\bin\System.Web.Http.WebHost.dll
+C:\Users\450G6\source\repos\MovieApp\MovieApp\MovieApp\bin\System.Net.Http.Formatting.xml
+C:\Users\450G6\source\repos\MovieApp\MovieApp\MovieApp\bin\System.Web.Http.xml
+C:\Users\450G6\source\repos\MovieApp\MovieApp\MovieApp\bin\System.Web.Http.WebHost.xml
+C:\Users\450G6\source\repos\MovieApp\MovieApp\MovieApp\bin\AutoMapper.dll
+C:\Users\450G6\source\repos\MovieApp\MovieApp\MovieApp\bin\AutoMapper.xml
