@@ -27,13 +27,13 @@ namespace MovieApp.Controllers
             var customers = _context.Customers.Include(c => c.MembershipType);
             return View(customers);
         }
-
+        /*
         public ActionResult Details(int id)
         {
             var customer = _context.Customers.Include(c => c.MembershipType).Single(c => c.Id == id);
             return View(customer);
         }
-
+          */
         public ActionResult New()
         {
             var DBmebershipTypes = _context.MembershipTypes;
@@ -45,9 +45,21 @@ namespace MovieApp.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Save(Customer customer)
         {
-            if(customer.Id==0)
+            ModelState.Remove("customer.Id");
+            var propertiesWithErrors = ModelState.Where(state => state.Value.Errors.Any()).Select(state => state.Key);
+            if (!ModelState.IsValid)
+            {
+                var viewModel = new CustomerFormViewModel()
+                {
+                    Customer = customer,
+                    MembershipTypes = _context.MembershipTypes.ToList()
+                };
+                return View("CustomerForm",viewModel);
+            }
+            if (customer.Id == 0)
                 _context.Customers.Add(customer);
             else
             {

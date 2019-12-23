@@ -11,6 +11,7 @@ namespace MovieApp.Models
     {
         public int Id { get; set; }
 
+        [Required]
         [Display(Name = "Movie name")]
         public string Name { get; set; }
 
@@ -19,9 +20,12 @@ namespace MovieApp.Models
 
         public string DateAdded { get; set; }
 
+        [Required]
+        [Range(1,20)]
         [Display(Name = "Number in stock")]
         public short StockNumber { get; set; }
 
+        [Required]
         [Display(Name="Genre")]
         public int GenreId { get; set; }
 

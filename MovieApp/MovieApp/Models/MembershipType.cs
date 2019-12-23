@@ -5,6 +5,7 @@ using System.Web;
 
 namespace MovieApp.Models
 {
+    public enum  MembershipTypeName {unknown, PayAsYouGo,Monthly,Quarterly,Annual}
     public class MembershipType
     {
         public int Id { get; set; }
