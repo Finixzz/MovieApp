@@ -313,6 +313,7 @@ fieldset {
   border: 0;
 }
 
+
 legend {
   display: block;
   width: 100%;
@@ -2218,7 +2219,7 @@ pre code {
 
 .form-control {
   display: block;
-  width: 100%;
+  width: 250px;
   height: calc(1.5em + 0.75rem + 2px);
   padding: 0.375rem 0.75rem;
   font-size: 0.875rem;
@@ -11156,4 +11157,13 @@ a.list-group-item-danger.active:hover, a.list-group-item-danger.active:focus {
 
 .modal .close:not(:disabled):not(.disabled):hover, .modal .close:not(:disabled):not(.disabled):focus {
   color: #000;
+}
+.field-validation-error {
+    color: red;
+    font-weight: bold;
+}
+
+.input-validation-error {
+    background: pink;
+    border: 1px solid red;
 }
