@@ -21,16 +21,36 @@ else
             <tr>
                 <td class="alert-light text-center">CUSTOMERS</td>
                 <td class="alert-light text-center">MEMBERSHIP TYPE</td>
+                <td>DELETE</td>
+               
             </tr>
             @foreach (var customer in customers)
             {
                 <tr>
                     <td class="active">@Html.ActionLink(customer.FirstName + " " + customer.LastName, "Edit", "Customers", new { id = customer.Id }, null)</td>
                     <td>@customer.MembershipType.Name</td>
+                    <td><button class="delete" id=@customer.Id>Delete customer</button></td>
                 </tr>
             }
         </tbody>
     </table>
 }
 
-
+@section scripts{
+  <script>
+      $(document).ready(function () {
+          $(".delete").click(function () {
+              var button = $(this);
+              if (confirm("Are you sure you want do delete this customer?")) {
+                  $.ajax({
+                      url: "/api/customers/" + $(".delete").attr("id"),
+                      method: "DELETE",
+                      success: function () {
+                          button.parents("tr").remove();
+                      }
+                  })
+              }
+          });
+      });
+    </script>
+}
